@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - apt: 
+      name: git
+      state: present
+  - apt:
+      name: tree
+      state: present
+  - apt:
+      update_cache: yes
